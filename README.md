@@ -69,3 +69,36 @@ You can author your README using Visual Studio Code. Here are some useful editor
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
+
+---
+
+## 功能說明與使用方式 (中文)
+
+本擴充功能提供一個視覺化的編輯器，讓您可以透過拖拉的方式調整 UI 元件的位置。
+
+### 主要功能
+
+*   **視覺化編輯**：在 VS Code 中開啟一個可互動的畫布 (Webview)，讓您能直觀地移動元件。
+*   **檔案同步**：當元件在畫布上被移動後，變更會自動儲存回來源的 `.uijson` 檔案。
+*   **自訂格式**：使用簡單的 `.uijson` 檔案格式來定義您的 UI 佈局。
+
+### 如何使用
+
+1.  **建立檔案**：在您的專案中建立一個副檔名為 `.uijson` 的檔案 (例如: `my-ui.uijson`)。
+2.  **定義元件**：在檔案中，使用 JSON 格式來定義您的元件 ID 和初始位置 (x, y)。例如：
+    ```json
+    {
+      "header": { "x": 10, "y": 10 },
+      "sidebar": { "x": 10, "y": 60 },
+      "mainContent": { "x": 120, "y": 60 }
+    }
+    ```
+3.  **打開編輯器**：
+    *   在 VS Code 中打開您建立的 `.uijson` 檔案。
+    *   按下 `Ctrl+Shift+P` (在 Mac 上為 `Cmd+Shift+P`) 來打開命令面板。
+    *   輸入並選擇 "**Open UI Dragger Editor**" 命令。
+4.  **開始編輯**：
+    *   一個新的編輯器分頁將會開啟，並在畫布上顯示您定義的元件。
+    *   在畫布上用滑鼠拖拉元件到您想要的位置。
+5.  **自動儲存**：
+    *   當您放開滑鼠後，您的 `.uijson` 檔案內容將會自動更新並儲存。
